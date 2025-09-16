@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'"
+    />
+    <meta
+      http-equiv="X-Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'"
+    />
+    <title>Hello from Electron renderer!</title>
+  </head>
+  <body>
+    <h1>Hello from Electron</h1>
+    <p>下面是一些 Renderer ⇄ Main 的示例交互：</p>
+
+    <section>
+      <button id="btn-version">获取应用版本</button>
+      <span id="version-result"></span>
+    </section>
+
+    <section>
+      <button id="btn-path">获取 userData 路径</button>
+      <code id="path-result"></code>
+    </section>
+
+    <section>
+      <button id="btn-open">打开外部链接（Electron 官网）</button>
+    </section>
+
+    <script src="renderer.js"></script>
+  </body>
+</html>
